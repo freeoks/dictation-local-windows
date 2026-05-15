@@ -17,6 +17,10 @@ Voice typing for Windows: Press and hold Alt+Space → speak → release → the
 
 Base requirements:
 
+Because every Python microphone capture library was 'conflicting with Intel SST drivers' (according to Google, anyway), I had to install a virtual audio cable: https://vb-audio.com/Cable/.
+For the virtual cable to actually work, you have to tweak a setting in the Windows sound settings. You can launch it by hitting Win + R and running mmsys.cpl. <img width="394" height="450" alt="image" src="https://github.com/user-attachments/assets/4be683be-48cb-4f0a-93b5-895243f45d5d" />
+There, I selected the laptop's built-in mic, went to its Properties, and on the 'Listen' tab, I chose the virtual cable device I just installed <img width="405" height="458" alt="image" src="https://github.com/user-attachments/assets/55c95f1b-ca83-42c0-8b31-7a93244dc0df" />
+
 ```
 pip install sounddevice numpy keyboard pyperclip pywin32 openvino openvino-genai huggingface_hub
 ```
