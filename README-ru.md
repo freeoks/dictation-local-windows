@@ -16,6 +16,9 @@
 
 Базовое:
 
+Так как все питоновские библиотеки для захвата звука с микрофона "конфликтовали с драйверами Intel SST" (Так, мне сказал Google), мне пришлось установить виртуальный аудиокабель https://vb-audio.com/Cable/. Чтобы виртуальный кабель заработал, нужно сделать настройку в оснастке управления звуком Windows. Запустить ее можно нажав Win+R mmsys.cpl. В оснастке управления звуком я выбрал встороенный в ноутбук микрофон и перешёл в его свойства <img width="394" height="450" alt="image" src="https://github.com/user-attachments/assets/4be683be-48cb-4f0a-93b5-895243f45d5d" />
+ На вкладке Listen я выбрал устройство виртуального кабеля, которое установил ранее <img width="405" height="458" alt="image" src="https://github.com/user-attachments/assets/55c95f1b-ca83-42c0-8b31-7a93244dc0df" />
+
 ```
 pip install sounddevice numpy keyboard pyperclip pywin32 openvino openvino-genai huggingface_hub
 ```
